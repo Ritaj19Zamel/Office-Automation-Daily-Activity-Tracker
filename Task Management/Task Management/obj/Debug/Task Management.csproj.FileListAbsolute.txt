@@ -1,0 +1,34 @@
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\Task Management.exe.config
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\Task Management.exe
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\Task Management.pdb
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Properties.Resources.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.exe
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.pdb
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Admin_Dashboard.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Login.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.AddTasks.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.CustomControls.CustomTextBox.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Emp_Dashboard.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Analytics_Dashboard.resources
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\EPPlus.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\LiveCharts.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\LiveCharts.pdb
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.Buffers.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.Memory.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.csproj.CopyComplete
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Messages.resources
