@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace Task_Management
+namespace Task_Management.Helpers
 {
     class DatabaseHelper
     {

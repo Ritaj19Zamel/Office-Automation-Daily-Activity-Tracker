@@ -6,12 +6,10 @@ C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Manag
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.exe
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.pdb
-C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Admin_Dashboard.resources
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Login.resources
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.AddTasks.resources
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.CustomControls.CustomTextBox.resources
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.csproj.AssemblyReference.cache
-C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Emp_Dashboard.resources
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Analytics_Dashboard.resources
 C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\DocumentFormat.OpenXml.Framework.dll
@@ -31,4 +29,6 @@ C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.Mem
 C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\admin\source\repos\Task Management\Task Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task Management.csproj.CopyComplete
-C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Messages.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.ChatForm.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.Dashboard.resources
+C:\Users\admin\source\repos\Task Management\Task Management\obj\Debug\Task_Management.TaskDetailsForm.resources

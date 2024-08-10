@@ -52,17 +52,23 @@
     <Compile Include="AddTasks.Designer.cs">
       <DependentUpon>AddTasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Dashboard.cs">
+    <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Dashboard.Designer.cs">
-      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Analytics_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Analytics_Dashboard.Designer.cs">
       <DependentUpon>Analytics_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatForm.designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\CustomButtons.cs">
       <SubType>Component</SubType>
@@ -76,47 +82,44 @@
     <Compile Include="CustomControls\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseHelper.cs" />
-    <Compile Include="Emp_Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Emp_Dashboard.Designer.cs">
-      <DependentUpon>Emp_Dashboard.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Helpers\DatabaseHelper.cs" />
+    <Compile Include="Helpers\UserManager.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Messages.cs">
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="TaskDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Messages.Designer.cs">
-      <DependentUpon>Messages.cs</DependentUpon>
+    <Compile Include="TaskDetailsForm.Designer.cs">
+      <DependentUpon>TaskDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddTasks.resx">
       <DependentUpon>AddTasks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_Dashboard.resx">
-      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Analytics_Dashboard.resx">
       <DependentUpon>Analytics_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChatForm.resx">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Emp_Dashboard.resx">
-      <DependentUpon>Emp_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Messages.resx">
-      <DependentUpon>Messages.cs</DependentUpon>
+    <EmbeddedResource Include="TaskDetailsForm.resx">
+      <DependentUpon>TaskDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

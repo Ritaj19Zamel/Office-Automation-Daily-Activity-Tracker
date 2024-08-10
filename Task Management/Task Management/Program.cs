@@ -16,9 +16,9 @@ namespace Task_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Messages(2));
+          //  Application.Run(new ChatForm());
             // Application.Run(new Analytics_Dashboard());
-            // Application.Run(new Login());
+             Application.Run(new Login());
             // Application.Run(new Admin_Dashboard());
             // Application.Run(new AddTasks());
         }

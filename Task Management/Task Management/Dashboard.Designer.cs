@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Task_Management
 {
-    partial class Admin_Dashboard
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,11 @@ namespace Task_Management
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.btn_Messages = new System.Windows.Forms.Button();
             this.btn_Analytics = new System.Windows.Forms.Button();
@@ -48,21 +48,20 @@ namespace Task_Management
             this.pnl_main = new System.Windows.Forms.Panel();
             this.pnl_summary = new System.Windows.Forms.Panel();
             this.gb_Search = new System.Windows.Forms.GroupBox();
-            this.btn_Search = new Task_Management.CustomControls.CustomButtons();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_EndDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dtp_StartDate = new System.Windows.Forms.DateTimePicker();
-            this.cmb_Employee = new Task_Management.CustomControls.CustomComboBox();
-            this.txt_srchTaskName = new Task_Management.CustomControls.CustomTextBox();
-            this.cmb_status = new Task_Management.CustomControls.CustomComboBox();
             this.pnl_data = new System.Windows.Forms.Panel();
             this.dgv_Tasks = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_search = new System.Windows.Forms.Panel();
             this.lb_name = new System.Windows.Forms.Label();
             this.lb_weclcome = new System.Windows.Forms.Label();
             this.lb_Date = new System.Windows.Forms.Label();
+            this.btn_Search = new Task_Management.CustomControls.CustomButtons();
+            this.cmb_Employee = new Task_Management.CustomControls.CustomComboBox();
+            this.txt_srchTaskName = new Task_Management.CustomControls.CustomTextBox();
+            this.cmb_status = new Task_Management.CustomControls.CustomComboBox();
             this.sidebarPanel.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_picbox)).BeginInit();
@@ -108,6 +107,7 @@ namespace Task_Management
             this.btn_Messages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Messages.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Messages.UseVisualStyleBackColor = false;
+            this.btn_Messages.Click += new System.EventHandler(this.btn_Messages_Click);
             // 
             // btn_Analytics
             // 
@@ -129,6 +129,7 @@ namespace Task_Management
             this.btn_Analytics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Analytics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Analytics.UseVisualStyleBackColor = false;
+            this.btn_Analytics.Visible = false;
             // 
             // btn_AddTasks
             // 
@@ -150,6 +151,7 @@ namespace Task_Management
             this.btn_AddTasks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_AddTasks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_AddTasks.UseVisualStyleBackColor = false;
+            this.btn_AddTasks.Visible = false;
             this.btn_AddTasks.Click += new System.EventHandler(this.btn_AddTasks_Click);
             // 
             // btn_AllTasks
@@ -241,27 +243,6 @@ namespace Task_Management
             this.gb_Search.TabIndex = 1;
             this.gb_Search.TabStop = false;
             // 
-            // btn_Search
-            // 
-            this.btn_Search.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btn_Search.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.btn_Search.BorderColor = System.Drawing.Color.DarkCyan;
-            this.btn_Search.BorderRadius = 20;
-            this.btn_Search.BorderSize = 0;
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(520, 133);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(150, 40);
-            this.btn_Search.TabIndex = 10;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.TextColor = System.Drawing.Color.White;
-            this.btn_Search.UseVisualStyleBackColor = false;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -299,6 +280,122 @@ namespace Task_Management
             this.dtp_StartDate.Size = new System.Drawing.Size(96, 24);
             this.dtp_StartDate.TabIndex = 6;
             this.dtp_StartDate.ValueChanged += new System.EventHandler(this.dtp_StartDate_ValueChanged);
+            // 
+            // pnl_data
+            // 
+            this.pnl_data.Controls.Add(this.dgv_Tasks);
+            this.pnl_data.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_data.Location = new System.Drawing.Point(0, 236);
+            this.pnl_data.Name = "pnl_data";
+            this.pnl_data.Size = new System.Drawing.Size(682, 317);
+            this.pnl_data.TabIndex = 6;
+            // 
+            // dgv_Tasks
+            // 
+            this.dgv_Tasks.AllowUserToAddRows = false;
+            this.dgv_Tasks.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.dgv_Tasks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Tasks.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Tasks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Tasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Tasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Tasks.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Tasks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Tasks.GridColor = System.Drawing.Color.White;
+            this.dgv_Tasks.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Tasks.Name = "dgv_Tasks";
+            this.dgv_Tasks.ReadOnly = true;
+            this.dgv_Tasks.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_Tasks.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Tasks.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.dgv_Tasks.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_Tasks.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_Tasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Tasks.Size = new System.Drawing.Size(682, 317);
+            this.dgv_Tasks.TabIndex = 0;
+            this.dgv_Tasks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Tasks_CellClick);
+            // 
+            // pnl_search
+            // 
+            this.pnl_search.Controls.Add(this.lb_name);
+            this.pnl_search.Controls.Add(this.lb_weclcome);
+            this.pnl_search.Controls.Add(this.lb_Date);
+            this.pnl_search.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_search.Location = new System.Drawing.Point(0, 0);
+            this.pnl_search.Name = "pnl_search";
+            this.pnl_search.Size = new System.Drawing.Size(682, 57);
+            this.pnl_search.TabIndex = 4;
+            // 
+            // lb_name
+            // 
+            this.lb_name.AutoSize = true;
+            this.lb_name.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lb_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lb_name.Location = new System.Drawing.Point(161, 0);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(64, 28);
+            this.lb_name.TabIndex = 1;
+            this.lb_name.Text = "name";
+            // 
+            // lb_weclcome
+            // 
+            this.lb_weclcome.AutoSize = true;
+            this.lb_weclcome.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lb_weclcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lb_weclcome.Location = new System.Drawing.Point(0, 0);
+            this.lb_weclcome.Name = "lb_weclcome";
+            this.lb_weclcome.Size = new System.Drawing.Size(161, 28);
+            this.lb_weclcome.TabIndex = 0;
+            this.lb_weclcome.Text = "Welcome back, ";
+            // 
+            // lb_Date
+            // 
+            this.lb_Date.AutoSize = true;
+            this.lb_Date.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_Date.ForeColor = System.Drawing.Color.Silver;
+            this.lb_Date.Location = new System.Drawing.Point(6, 28);
+            this.lb_Date.Name = "lb_Date";
+            this.lb_Date.Size = new System.Drawing.Size(46, 23);
+            this.lb_Date.TabIndex = 2;
+            this.lb_Date.Text = "date";
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_Search.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_Search.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btn_Search.BorderRadius = 20;
+            this.btn_Search.BorderSize = 0;
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search.ForeColor = System.Drawing.Color.White;
+            this.btn_Search.Location = new System.Drawing.Point(520, 133);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(150, 40);
+            this.btn_Search.TabIndex = 10;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.TextColor = System.Drawing.Color.White;
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // cmb_Employee
             // 
@@ -365,105 +462,7 @@ namespace Task_Management
             this.cmb_status.TabIndex = 4;
             this.cmb_status.Texts = "";
             // 
-            // pnl_data
-            // 
-            this.pnl_data.Controls.Add(this.dgv_Tasks);
-            this.pnl_data.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_data.Location = new System.Drawing.Point(0, 236);
-            this.pnl_data.Name = "pnl_data";
-            this.pnl_data.Size = new System.Drawing.Size(682, 317);
-            this.pnl_data.TabIndex = 6;
-            // 
-            // dgv_Tasks
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.dgv_Tasks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Tasks.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Tasks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Tasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Tasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Tasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Tasks.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_Tasks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Tasks.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Tasks.Name = "dgv_Tasks";
-            this.dgv_Tasks.RowHeadersWidth = 51;
-            this.dgv_Tasks.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.dgv_Tasks.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.dgv_Tasks.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gray;
-            this.dgv_Tasks.Size = new System.Drawing.Size(682, 317);
-            this.dgv_Tasks.TabIndex = 0;
-            this.dgv_Tasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Tasks_CellContentClick);
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGreen;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // pnl_search
-            // 
-            this.pnl_search.Controls.Add(this.lb_name);
-            this.pnl_search.Controls.Add(this.lb_weclcome);
-            this.pnl_search.Controls.Add(this.lb_Date);
-            this.pnl_search.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_search.Location = new System.Drawing.Point(0, 0);
-            this.pnl_search.Name = "pnl_search";
-            this.pnl_search.Size = new System.Drawing.Size(682, 57);
-            this.pnl_search.TabIndex = 4;
-            // 
-            // lb_name
-            // 
-            this.lb_name.AutoSize = true;
-            this.lb_name.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lb_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lb_name.Location = new System.Drawing.Point(161, 0);
-            this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(64, 28);
-            this.lb_name.TabIndex = 1;
-            this.lb_name.Text = "name";
-            // 
-            // lb_weclcome
-            // 
-            this.lb_weclcome.AutoSize = true;
-            this.lb_weclcome.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lb_weclcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lb_weclcome.Location = new System.Drawing.Point(0, 0);
-            this.lb_weclcome.Name = "lb_weclcome";
-            this.lb_weclcome.Size = new System.Drawing.Size(161, 28);
-            this.lb_weclcome.TabIndex = 0;
-            this.lb_weclcome.Text = "Welcome back, ";
-            // 
-            // lb_Date
-            // 
-            this.lb_Date.AutoSize = true;
-            this.lb_Date.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lb_Date.ForeColor = System.Drawing.Color.Silver;
-            this.lb_Date.Location = new System.Drawing.Point(6, 28);
-            this.lb_Date.Name = "lb_Date";
-            this.lb_Date.Size = new System.Drawing.Size(46, 23);
-            this.lb_Date.TabIndex = 2;
-            this.lb_Date.Text = "date";
-            // 
-            // Admin_Dashboard
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -473,7 +472,7 @@ namespace Task_Management
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "Admin_Dashboard";
+            this.Name = "Dashboard";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
             this.sidebarPanel.ResumeLayout(false);
@@ -519,7 +518,6 @@ namespace Task_Management
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtp_StartDate;
         private CustomControls.CustomButtons btn_Search;
-        private DataGridViewTextBoxColumn Column1;
     }
 }
 

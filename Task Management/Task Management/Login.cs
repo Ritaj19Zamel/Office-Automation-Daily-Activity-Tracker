@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Task_Management.Helpers;
+using Task_Management.Models;
 
 namespace Task_Management
 {
@@ -41,19 +42,21 @@ namespace Task_Management
                     MessageBox.Show("Invalid Username or Password.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                int isAdmin = Convert.ToInt32(dh.GetValue("SELECT isadmin FROM users where username = '" + txt_username.Texts + "'"));
-                string userName = dh.GetValue("SELECT e.e_name_en FROM users u LEFT JOIN Employees e ON e.e_id = u.e_id WHERE username = '" + txt_username.Texts + "'").ToString();
-                this.Hide();
-                if (isAdmin == 1)
+                User user = UserManager.Login(txt_username.Texts, txt_pass.Texts);
+                if (user != null)
                 {
-                    Admin_Dashboard adminDashboard = new Admin_Dashboard(userName);
+                    Dashboard adminDashboard = new Dashboard(user);
                     adminDashboard.Show();
+ 
                 }
                 else
                 {
-                    Emp_Dashboard empDashboard = new Emp_Dashboard();
-                    empDashboard.Show();
+                    MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+            
+               
+                
             }
             catch(Exception ex)
             {
